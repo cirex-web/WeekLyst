@@ -1,0 +1,13 @@
+:root{
+  --primary-color:#9df1fd
+}
+body {
+  margin: 0;
+  width: 400px;
+  outline: 2px solid black;
+  margin: auto;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--primary-color);
+
+}
+

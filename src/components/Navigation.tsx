@@ -1,27 +1,54 @@
-import * as React from 'react';
-import css from "../styles/navigation.module.css";
+import * as React from "react";
+import css from "styles/navigation.module.css";
+import { Heading } from "./Text";
+interface ITab {
+    label: string;
+    icon: string;
+}
 export interface IHeadingProps {
-    children: React.ReactNode;
+    activeTab: number;
+    setActiveTab: (index: number) => void;
+    tabs: ITab[];
 }
 
-
-export default function Header(props: IHeadingProps) {
+function Tab({
+    label,
+    icon,
+    active,
+    onClick,
+}: {
+    label: string;
+    active: boolean;
+    icon: string;
+    onClick: () => void;
+}) {
     return (
-        <div className={css.container}>
-            {props.children}
-        </div>
-    );
-}
-export function Tab({ children: label, icon, active, onClick }: { children: React.ReactNode, active: boolean, icon: string, onClick: () => void }) {
-    console.log(active);
-    return (
-        <div className={active?css.activeTab:css.tab} onClick={onClick} style={{ flexGrow: active ? 1 : 0 }}>
+        <div
+            className={active ? css.activeTab : css.tab}
+            onClick={onClick}
+            style={{ flexGrow: active ? 1 : 0 }}
+        >
             <div className={css.innerTab}>
                 <img src={icon} alt="" />
                 <div className={css.tabLabel}>
-                    {label}
+                    <Heading>{label}</Heading>
                 </div>
             </div>
         </div>
-    )
+    );
+}
+export default function Header(props: IHeadingProps) {
+    return (
+        <div className={css.container}>
+            {props.tabs.map((tab, index) => (
+                <Tab
+                    key={index}
+                    onClick={() => props.setActiveTab(index)}
+                    icon={tab.icon}
+                    active={index === props.activeTab}
+                    label={tab.label}
+                />
+            ))}
+        </div>
+    );
 }

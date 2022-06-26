@@ -1,0 +1,18 @@
+.addButton{
+    background-color: var(--darker-background-color);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .1s all;
+    right: 0;
+    margin-left: auto;
+    width: fit-content;
+}
+.addButton:hover{
+    transform: scale(1.1);
+}
+.addButton:active{
+    transform: scale(.9);
+}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import css from "../styles/text.module.css"
+import css from "styles/text.module.css"
 export interface ITextProps {
     children: string;
 }

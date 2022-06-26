@@ -1,5 +1,7 @@
 :root{
-  --primary-color:#9df1fd
+  --text-color:#167D7F;
+  --background-color:#DDFFE7;
+  --darker-background-color:#29A0B1;
 }
 body {
   margin: 0;
@@ -7,7 +9,8 @@ body {
   outline: 2px solid black;
   margin: auto;
   font-family: "Source Sans Pro", sans-serif;
-  background-color: var(--primary-color);
-
 }
 
+svg{
+  display:block !important;
+}

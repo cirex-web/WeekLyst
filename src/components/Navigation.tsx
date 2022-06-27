@@ -1,5 +1,6 @@
 import * as React from "react";
 import css from "styles/navigation.module.css";
+import { Button } from "./Buttons";
 import { Heading } from "./Text";
 interface ITab {
     label: string;
@@ -23,18 +24,24 @@ function Tab({
     onClick: () => void;
 }) {
     return (
-        <div
-            className={active ? css.activeTab : css.tab}
+        <Button
+            bouncy={false}
             onClick={onClick}
-            style={{ flexGrow: active ? 1 : 0 }}
+            style={{
+                flexGrow: active ? 1 : 0,
+                transition: ".5s flex-grow",
+                backgroundColor: active ? "var(--background-color)" : "white",
+                padding: "10px 20px",
+                zIndex: 1
+            }}
         >
             <div className={css.innerTab}>
-                <img src={icon} alt="" />
+                <img className={css.icon} src={icon} alt="" />
                 <div className={css.tabLabel}>
                     <Heading>{label}</Heading>
                 </div>
             </div>
-        </div>
+        </Button>
     );
 }
 export default function Header(props: IHeadingProps) {

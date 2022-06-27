@@ -1,0 +1,29 @@
+.button{
+    color: black;
+    font-size: var(--body-font-size);
+    cursor: pointer;
+    transition: .1s all;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 5px 10px;
+    /* centering! */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.button > span {
+    vertical-align: middle;
+}
+.button.bouncy:hover{
+    transform: scale(1.05);
+}
+.button.bouncy:active{
+    transform: scale(1);
+}
+.button:not(.bouncy):hover{
+    filter: brightness(0.9);
+}
+.button:not(.bouncy):active{
+    filter: brightness(0.8);
+}

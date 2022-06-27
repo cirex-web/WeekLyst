@@ -2,6 +2,9 @@
   --text-color:#167D7F;
   --background-color:#DDFFE7;
   --darker-background-color:#29A0B1;
+  --heading-font-size: 24px;
+  --body-font-size: 18px;
+  --small-font-size: 12px;
 }
 body {
   margin: 0;

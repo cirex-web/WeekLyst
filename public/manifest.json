@@ -1,10 +1,11 @@
 {
-  "name": "WeekLyst",
-  "description": "Use weekly timers to stay on track and on top of your goals without the loss of flexibility.",
-  "version": "1.0",
-  "manifest_version": 3,
-  "action": {
-      "default_popup": "index.html",
-      "default_title": "Weekly Timers"
-  }
+    "name": "WeekLyst",
+    "description": "Use weekly timers to stay on track and on top of your goals without the loss of flexibility.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Weekly Timers"
+    },
+    "permissions": ["storage"]
 }

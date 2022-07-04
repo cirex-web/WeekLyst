@@ -7,5 +7,5 @@
     font-weight: bold;
 }
 .paragraph{
-    font-size: var(--small-font-size);
+    font-size: var(--body-font-size);
 }

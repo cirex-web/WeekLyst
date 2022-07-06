@@ -27,30 +27,17 @@ export default function List(props: IListProps) {
             <ActivityRow/>
             {/* <EmptyPlaceholder text="You don't have any weekly tasks yet! Create one below." height="100px" /> */}
             <Button
-                style={{
-                    width: "99px",
-                    height: "99px",
-                    backgroundColor: "var(--darker-background-color)",
-                    fontSize: "40px",
-                }}
+                
                 bouncy={false}
             >
                 <RoundedIcon iconName="add" />
             </Button>
             <Button
-                style={{
-                    width: "99px",
-                    height: "99px",
-                    backgroundColor: "var(--darker-background-color)",
-                    fontSize: "40px",
-                }}
                 bouncy={false}
             >
                 a
             </Button>
-            <Button style={{ backgroundColor: "white", color: "blacks" }}>
-                Very default
-            </Button>
+
         </div>
     );
 }

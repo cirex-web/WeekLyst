@@ -1,12 +1,13 @@
 import * as React from "react";
 import css from "styles/input.module.css";
 export interface IInputProps {
-    styles?: React.CSSProperties;
     text: string;
     setText: (text: string) => void;
-    type?: "email" | "number" | "date" | "text" | "password"|"time";
+    type?: "email" | "number" | "date" | "text" | "password" | "time";
     onBlur?: () => void;
     onFocus?: () => void;
+    width?: number;
+    flexGrow?: number;
 }
 
 export default React.forwardRef(
@@ -25,6 +26,7 @@ export default React.forwardRef(
                 className={
                     isFocused ? css.focusedContainer : css.unfocusedContainer
                 }
+                style={{ width: props.width, flexGrow: props.flexGrow }}
             >
                 <input
                     type={props.type}
@@ -34,7 +36,6 @@ export default React.forwardRef(
                     onChange={(event) => props.setText(event.target.value)}
                     onFocus={onFocus}
                     onBlur={onBlur}
-                    style={props.styles}
                 />
             </div>
         );

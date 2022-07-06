@@ -2,7 +2,6 @@ import * as React from "react";
 
 interface ISpecialIconProps {
     iconName: string;
-    fontSize?: string;
 }
 interface IDefaultIconProps extends ISpecialIconProps {
     type: "rounded" | "sharp" | "outlined";

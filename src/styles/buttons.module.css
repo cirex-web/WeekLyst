@@ -1,16 +1,12 @@
 .button{
     color: black;
-    font-size: var(--body-font-size);
+    font-size: inherit;
     cursor: pointer;
     transition: .1s all;
     border: none;
     border-radius: 0;
     background-color: transparent;
     padding: 5px 10px;
-    /* centering! */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 .button > span {
     vertical-align: middle;

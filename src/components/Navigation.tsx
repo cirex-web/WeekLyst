@@ -27,13 +27,11 @@ function Tab({
         <Button
             bouncy={false}
             onClick={onClick}
-            style={{
-                flexGrow: active ? 1 : 0,
-                transition: ".5s flex-grow",
-                backgroundColor: active ? "var(--background-color)" : "white",
-                padding: "10px 20px",
-                zIndex: 1
-            }}
+            flexGrow={active ? 1 : 0}
+            transition={".5s flex-grow"}
+            backgroundColor={active ? "var(--background-color)" : "white"}
+            padding={"10px 20px"}
+            zIndex={1}
         >
             <div className={css.innerTab}>
                 <img className={css.icon} src={icon} alt="" />

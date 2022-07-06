@@ -1,5 +1,4 @@
 .input {
-    flex: 1 1 auto;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -12,7 +11,9 @@
     cursor: inherit;
     appearance: none;
     outline: none;
-    margin: 6px;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .container {
@@ -20,6 +21,7 @@
     transition: .1s all;
     border-radius: 4px;
     height: fit-content;
+    width: 30px;
 }
 
 .focusedContainer {

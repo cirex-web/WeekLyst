@@ -1,19 +1,20 @@
-:root{
-  --text-color:#167D7F;
-  --background-color:#DDFFE7;
-  --darker-background-color:#29A0B1;
-  --heading-font-size: 24px;
-  --body-font-size: 18px;
-  --small-font-size: 12px;
+:root {
+    --text-color: #167d7f;
+    --light-text-color: #98d7c2;
+    --background-color: #ddffe7;
+    --darker-background-color: #29a0b1;
+    --heading-font-size: 24px;
+    --body-font-size: 18px;
+    --small-font-size: 12px;
 }
 body {
-  margin: 0;
-  width: 400px;
-  outline: 2px solid black;
-  margin: auto;
-  font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    width: 400px;
+    outline: 2px solid black;
+    margin: auto;
+    font-family: "Source Sans Pro", sans-serif;
 }
 
-svg{
-  display:block !important;
+svg {
+    display: block !important;
 }

@@ -39,6 +39,7 @@ function App() {
                     backgroundColor: "var(--background-color)",
                     position: "relative",
                     padding: "20px",
+                    fontSize:"var(--body-font-size)",
                 }}
             >
                 {tabs[activeTab].component}

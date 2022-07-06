@@ -1,14 +1,15 @@
 import * as React from "react";
 import css from "styles/buttons.module.css";
 
-interface IButtonProps {
+type IButtonProps = {
+    [key in keyof React.CSSProperties]: React.CSSProperties[key];
+} & {
     children: React.ReactNode;
     round?: boolean;
     onClick?: () => void;
     bouncy?: boolean;
-    style?: React.CSSProperties;
-    centered?: boolean;    
-}
+    centered?: boolean;
+};
 
 const Button: React.FunctionComponent<IButtonProps> = (props) => {
     const {
@@ -17,14 +18,16 @@ const Button: React.FunctionComponent<IButtonProps> = (props) => {
         bouncy = true,
         onClick,
         centered,
+        ...styles
     } = props;
+
     return (
         <button
             className={css.button + " " + (bouncy ? css.bouncy : "")}
             style={{
                 borderRadius: round ? "9999px" : undefined,
                 textAlign: centered ? "center" : "left",
-                ...props.style
+                ...styles,
             }}
             onClick={onClick}
         >

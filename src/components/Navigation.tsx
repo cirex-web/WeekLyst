@@ -1,6 +1,7 @@
 import * as React from "react";
 import css from "styles/navigation.module.css";
 import { Button } from "./Buttons";
+import FlexRow from "./FlexRow";
 import { Heading } from "./Text";
 interface ITab {
     label: string;
@@ -44,7 +45,7 @@ function Tab({
 }
 export default function Header(props: IHeadingProps) {
     return (
-        <div className={css.container}>
+        <FlexRow>
             {props.tabs.map((tab, index) => (
                 <Tab
                     key={index}
@@ -54,6 +55,6 @@ export default function Header(props: IHeadingProps) {
                     label={tab.label}
                 />
             ))}
-        </div>
+        </FlexRow>
     );
 }

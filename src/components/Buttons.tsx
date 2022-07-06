@@ -5,28 +5,41 @@ type IButtonProps = {
     [key in keyof React.CSSProperties]: React.CSSProperties[key];
 } & {
     children: React.ReactNode;
-    round?: boolean;
+    circle?: boolean;
     onClick?: () => void;
     bouncy?: boolean;
     centered?: boolean;
+    outlineColor?: string;
 };
 
 const Button: React.FunctionComponent<IButtonProps> = (props) => {
     const {
-        round,
+        circle,
         children,
         bouncy = true,
         onClick,
         centered,
+        outlineColor,
+        outlineWidth = "1px",
         ...styles
     } = props;
 
     return (
         <button
-            className={css.button + " " + (bouncy ? css.bouncy : "")}
+            className={
+                css.button +
+                " " +
+                (bouncy ? css.bouncy : "") +
+                " " +
+                (circle ? css.circle : "") +
+                " " +
+                (centered ? css.centered : "")
+            }
             style={{
-                borderRadius: round ? "9999px" : undefined,
-                textAlign: centered ? "center" : "left",
+                outline: outlineColor
+                    ? `${outlineColor} solid ${outlineWidth}`
+                    : "",
+                outlineOffset: `-${outlineWidth}`,
                 ...styles,
             }}
             onClick={onClick}
@@ -37,7 +50,7 @@ const Button: React.FunctionComponent<IButtonProps> = (props) => {
 };
 
 const RoundButton = (props: IButtonProps) => {
-    return <Button {...props} round />;
+    return <Button {...props} circle />;
 };
 
 export { Button, RoundButton };

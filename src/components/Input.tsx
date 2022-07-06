@@ -8,6 +8,8 @@ export interface IInputProps {
     onFocus?: () => void;
     width?: number;
     flexGrow?: number;
+    disabled?: boolean;
+    fontWeight?: string;
 }
 
 export default React.forwardRef(
@@ -24,11 +26,20 @@ export default React.forwardRef(
         return (
             <div
                 className={
-                    isFocused ? css.focusedContainer : css.unfocusedContainer
+                    props.disabled
+                        ? css.disabledContainer
+                        : isFocused
+                        ? css.focusedContainer
+                        : css.unfocusedContainer
                 }
-                style={{ width: props.width, flexGrow: props.flexGrow }}
+                style={{
+                    width: props.width,
+                    flexGrow: props.flexGrow,
+                    fontWeight: props.fontWeight,
+                }}
             >
                 <input
+                    disabled={props.disabled}
                     type={props.type}
                     ref={ref}
                     className={css.input}

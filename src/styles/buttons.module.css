@@ -1,25 +1,35 @@
-.button{
+.button {
     color: black;
     font-size: inherit;
     cursor: pointer;
-    transition: .1s all;
+    transition: 0.1s all;
     border: none;
     border-radius: 0;
     background-color: transparent;
-    padding: 5px 10px;
+    padding: 0;
+}
+.button.circle {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+}
+.button.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .button > span {
     vertical-align: middle;
 }
-.button.bouncy:hover{
+.button.bouncy:hover {
     transform: scale(1.05);
 }
-.button.bouncy:active{
-    transform: scale(1);
+.button.bouncy:active {
+    transform: scale(.95);
 }
-.button:not(.bouncy):hover{
+.button:not(.bouncy):hover {
     filter: brightness(0.9);
 }
-.button:not(.bouncy):active{
+.button:not(.bouncy):active {
     filter: brightness(0.8);
 }

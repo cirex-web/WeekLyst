@@ -10,7 +10,7 @@ const Icon: React.FunctionComponent<IDefaultIconProps> = (props) => {
     return (
         <span
             className={`material-symbols-${props.type}`}
-            style={{ fontSize: "inherit" }}
+            style={{ fontSize: "inherit", fontWeight: "inherit" }}
         >
             {props.iconName}
         </span>

@@ -11,17 +11,21 @@
     cursor: inherit;
     appearance: none;
     outline: none;
-    padding: 6px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .container {
     outline: 1px solid;
-    transition: .1s all;
-    border-radius: 4px;
+    outline-offset: 4px;
+    transition: 0.1s all;
+    border-radius: 2px;
     height: fit-content;
     width: 30px;
+}
+.disabledContainer {
+    composes: container;
+    outline-color: transparent;
 }
 
 .focusedContainer {

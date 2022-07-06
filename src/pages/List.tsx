@@ -25,6 +25,11 @@ export default function List(props: IListProps) {
     return (
         <div>
             <ActivityRow/>
+            <ActivityRow/>
+            <ActivityRow/>
+            <ActivityRow/>
+            <ActivityRow/>
+
             {/* <EmptyPlaceholder text="You don't have any weekly tasks yet! Create one below." height="100px" /> */}
             <Button
                 

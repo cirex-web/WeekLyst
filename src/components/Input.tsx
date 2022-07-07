@@ -10,6 +10,7 @@ export interface IInputProps {
     flexGrow?: number;
     disabled?: boolean;
     fontWeight?: string;
+    textAlign?: "left" | "center" | "right";
 }
 
 export default React.forwardRef(
@@ -47,6 +48,7 @@ export default React.forwardRef(
                     onChange={(event) => props.setText(event.target.value)}
                     onFocus={onFocus}
                     onBlur={onBlur}
+                    style={{textAlign: props.textAlign}}
                 />
             </div>
         );

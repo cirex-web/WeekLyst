@@ -45,7 +45,7 @@ function Tab({
 }
 export default function Header(props: IHeadingProps) {
     return (
-        <FlexRow>
+        <FlexRow className={css.tabContainer}>
             {props.tabs.map((tab, index) => (
                 <Tab
                     key={index}

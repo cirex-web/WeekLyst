@@ -17,6 +17,7 @@ interface IFlexRowProps {
     width?: string;
     height?: string;
     gap?: string;
+    className?: string;
 }
 
 const FlexRow: React.FunctionComponent<IFlexRowProps> = (props) => {
@@ -30,7 +31,8 @@ const FlexRow: React.FunctionComponent<IFlexRowProps> = (props) => {
         width = "auto",
         height = "auto",
         flexWrap,
-        gap
+        gap,
+        className,
     } = props;
 
     return (
@@ -47,6 +49,7 @@ const FlexRow: React.FunctionComponent<IFlexRowProps> = (props) => {
                 height,
                 gap
             }}
+            className={className}
         >
             {children}
         </div>

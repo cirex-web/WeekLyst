@@ -1,0 +1,17 @@
+- Add events
+    - add activity row UI
+        - figure out the button thing (circle) @done
+        - disabled input @done
+        - slide thing @done
+        - Show edit on hover @done
+        - autogrow time thing for input (instead of fixed width)
+        - Show actual time on edit
+        - Hide play button when editing
+        - Add button
+        - Create new event
+        - Can't edit/delete when ongoing??
+    - single event UI
+- Display events
+- Start/stop events
+
+Archive:

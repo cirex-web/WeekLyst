@@ -8,6 +8,7 @@
     --small-font-size: 12px;
 }
 body {
+    color: pink; /* lol don't do this */
     margin: 0;
     width: 400px;
     outline: 2px solid black;
@@ -18,3 +19,4 @@ body {
 svg {
     display: block !important;
 }
+

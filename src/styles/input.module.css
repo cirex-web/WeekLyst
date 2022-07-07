@@ -3,7 +3,7 @@
     font-size: inherit;
     font-weight: inherit;
     min-width: 0;
-    color: var(--text-color);
+    color: inherit;
     border: none;
     background: none;
     box-shadow: none;

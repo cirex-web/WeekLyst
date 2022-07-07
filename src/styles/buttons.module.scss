@@ -1,0 +1,43 @@
+.button {
+    font-size: inherit;
+    transition: 0.1s all;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    &:enabled {
+        &:hover {
+            cursor: pointer;
+        }
+        &.bouncy {
+            &:hover {
+                transform: scale(1.05);
+            }
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+        &:not(.bouncy) {
+            &:hover {
+                filter: brightness(0.9);
+            }
+            &:active {
+                filter: brightness(0.8);
+            }
+        }
+    }
+}
+.button.circle {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+}
+.button.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button > span {
+    vertical-align: middle;
+}

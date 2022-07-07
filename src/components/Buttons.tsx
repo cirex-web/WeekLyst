@@ -1,5 +1,5 @@
 import * as React from "react";
-import css from "styles/buttons.module.css";
+import css from "styles/buttons.module.scss";
 
 type IButtonProps = {
     [key in keyof React.CSSProperties]: React.CSSProperties[key];
@@ -10,6 +10,7 @@ type IButtonProps = {
     bouncy?: boolean;
     centered?: boolean;
     outlineColor?: string;
+    disabled?: boolean;
 };
 
 const Button: React.FunctionComponent<IButtonProps> = (props) => {
@@ -21,11 +22,13 @@ const Button: React.FunctionComponent<IButtonProps> = (props) => {
         centered,
         outlineColor,
         outlineWidth = "1px",
+        disabled = false,
         ...styles
     } = props;
-
+    console.log(disabled);
     return (
         <button
+            disabled={disabled}
             className={
                 css.button +
                 " " +
